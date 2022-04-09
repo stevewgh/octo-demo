@@ -22,4 +22,4 @@ jobs:
       with:
         tag_prefix: ""
     - name: Build the Docker image
-      run: docker build ./src --file src/Dockerfile --tag octotest:${{steps.semver.version}}
+      run: docker build ./src --file src/Dockerfile --tag octotest:${{steps.semver.outputs.version}}
