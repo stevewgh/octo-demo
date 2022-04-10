@@ -65,12 +65,12 @@ jobs:
         tag_prefix: "v"
 
     - name: Install Octopus CLI
-      uses: OctopusDeploy/install-octopus-cli-action@<version>
+      uses: OctopusDeploy/install-octopus-cli-action@1.1.1
       with:
         version: latest
         
     - name: Create a release in Octopus Deploy
-      uses: OctopusDeploy/create-release-action@<version>
+      uses: OctopusDeploy/create-release-action@1.1.1
       with:
         api_key: ${{ secrets.OCTOPUS_API_KEY }}
         project: 'octo-demo'
