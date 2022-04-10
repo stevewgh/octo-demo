@@ -8,4 +8,3 @@ graph LR;
     B[GitHub Action]--  Buid, Test, Publish Image to ECR -->C;
     C[GitHub Action]-- Create OD Release -->End;
 ```
-test
