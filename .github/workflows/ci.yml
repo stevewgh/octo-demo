@@ -63,15 +63,14 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         custom_tag: ${{steps.semver.outputs.version}}
         tag_prefix: "v"
-
-    - name: Install Octopus CLI
-      uses: OctopusDeploy/install-octopus-cli-action@1.1.10
+ 
+    - name: Install Octopus CLI 🐙
+      uses: OctopusDeploy/install-octopus-cli-action@v1.1.6
       with:
         version: latest
-
-    - name: Create a release in Octopus Deploy
-      uses: OctopusDeploy/create-release-action@1.1.1
+    - name: Create a release in Octopus Deploy 🐙
+      uses: OctopusDeploy/create-release-action@v1.0.6
       with:
         api_key: ${{ secrets.OCTOPUS_API_KEY }}
-        project: 'octo-demo'
-        server: ${{ secrets.OCTOPUS_SERVER }}
+        project: "octo-demo"
+        server: ${{ secrets.OCTOPUS_SERVER }}        
