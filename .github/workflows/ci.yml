@@ -2,9 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches-ignore: 
+      - main
   pull_request:
     branches: [ main ]
+
+env:
+  prerelease: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
 
@@ -21,5 +25,10 @@ jobs:
       id: semver
       with:
         tag_prefix: ""
+    - name: Branch Name
+      run: |
+        if [$prerelease]
+        echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
+      id: branchname
     - name: Build the Docker image
-      run: docker build ./src --file src/Dockerfile --tag octotest:${{steps.semver.outputs.version}}
+      run: docker build ./src --file src/Dockerfile --tag octotest:${{steps.semver.outputs.version}}-${{steps.branchname.outputs.branch}}
