@@ -27,8 +27,6 @@ jobs:
       # uses: PaulHatch/semantic-version@0c47e4e1069ada118d9a5d5a163d72735a251d0c
       uses: PaulHatch/semantic-version@v5.0.0-alpha
       id: semver
-      with:
-        tag_prefix: ""
         
     - name: Branch Name
       run: |
