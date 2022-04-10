@@ -68,7 +68,7 @@ jobs:
       uses: OctopusDeploy/install-octopus-cli-action@1.1.10
       with:
         version: latest
-        
+
     - name: Create a release in Octopus Deploy
       uses: OctopusDeploy/create-release-action@1.1.1
       with:
