@@ -73,4 +73,5 @@ jobs:
       with:
         api_key: ${{ secrets.OCTOPUS_API_KEY }}
         project: "octo-demo"
-        server: ${{ secrets.OCTOPUS_SERVER }}        
+        server: ${{ secrets.OCTOPUS_SERVER }}
+        release_number: ${{steps.semver.outputs.version}}${{steps.branchname.outputs.branch}}
