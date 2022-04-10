@@ -21,16 +21,15 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-        
-    - name: Fetch all history for all tags and branches
-      run: git fetch --prune --unshallow    
-      
+
     - name: Git Semantic Version
-      uses: PaulHatch/semantic-version@v4.0.3
+      # You may pin to the exact commit or the version.
+      # uses: PaulHatch/semantic-version@0c47e4e1069ada118d9a5d5a163d72735a251d0c
+      uses: PaulHatch/semantic-version@v5.0.0-alpha
       id: semver
       with:
         tag_prefix: ""
-        short_tags: true
+        
     - name: Branch Name
       run: |
         if [ "$prerelease" = true ]
