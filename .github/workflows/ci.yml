@@ -23,6 +23,7 @@ jobs:
       id: semver
       with:
         tag_prefix: ""
+        short_tags: true
     - name: Branch Name
       run: |
         if [ "$prerelease" = true ]
