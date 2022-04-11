@@ -1,5 +1,5 @@
-# octo-demo
-Demonstration of how to integrate a CI process with Octopus Deploy
+# octo-demo [![CI](https://github.com/stevewgh/octo-demo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/stevewgh/octo-demo/actions/workflows/ci.yml)
+Demonstration of how to integrate a CI process with Octopus Deploy 
 
 ## CI/CD flow
 ```mermaid
