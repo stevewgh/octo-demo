@@ -4,9 +4,9 @@ on:
   
   workflow_dispatch:
     
-  #push:
-  #  branches: 
-  #    - "**"
+  push:
+    branches: 
+      - "**"
 
 env:
   prerelease: ${{ github.ref != 'refs/heads/main' }}
