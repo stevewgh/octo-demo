@@ -1,7 +1,7 @@
 ---
 name: Request For Comments
 about: Use this to submit changes that are inviting comments
-title: Shiny new feature
+title: RFC: <idea title>
 labels: rfc
 assignees: ''
 
