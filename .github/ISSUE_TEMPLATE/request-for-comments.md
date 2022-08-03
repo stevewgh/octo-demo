@@ -1,7 +1,7 @@
 ---
 name: Request For Comments
 about: Use this to submit changes that are inviting comments
-title: RFC: 
+title: 'RFC: <idea title>' 
 labels: rfc
 assignees: ''
 
